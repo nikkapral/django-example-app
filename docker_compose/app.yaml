@@ -1,0 +1,15 @@
+services:
+  main_app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: main_app
+    ports:
+      - "${DJANGO_PORT}:8000"
+    command: "sh entrypoint.sh"
+    env_file:
+      - ../.env
+    depends_on:
+      - postgres
+    volumes:
+      - ..:/app

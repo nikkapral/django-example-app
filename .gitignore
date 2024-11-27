@@ -1,0 +1,10 @@
+*.pyc
+*__pycache__
+
+.vscode/
+.env
+
+core/project/settings/local.py
+
+static/*
+!static/.gitkeep
