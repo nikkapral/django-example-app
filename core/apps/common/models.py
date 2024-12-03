@@ -7,7 +7,8 @@ class TimedBaseModel(models.Model):
     )
     updated_at = models.DateTimeField(
         auto_now=True,
-        verbose_name='Date of update'
+        verbose_name='Date of update',
+        blank=True
     )
 
     class Meta:
